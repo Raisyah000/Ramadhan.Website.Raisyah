@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project4.css">
+</head>
+<body>
+        <div class="navbar">
+            <header>
+                <a href="#" class="baris">
+                <ul class="baru">
+               <li class="one"><a href="#Home">Home</a></li>
+               <li class="two"><a href="#Jadwal solat">Jadwal solat</a></li>
+               <li class="there"><a href="#Niat puasa">Niat puasa</a></li>
+               <li class="four"><a href="#Doa buka puasa">Doa buka puasa</a></li>
+               <li class="five"><a href="#Quete islami">Quete islami</a></li>
+            </ul>
+                </ul>
+                </a>
+            </header>
+        </div>
+
+        <div class="home" id="Home">
+            <h1 class="marhaban">Marhaban Ya Ramadhan</h1>
+            <h2 class="selamat">Selamat menunaikan ibadah puasa <br> 1447 H Tahun 2026 <br> Mohon maaf lahir dan batin</h2>
+        </div>
+
+        <div class="jadwal" id="Jadwal solat">
+           <h1>Jadwal solat</h1>
+           <br>
+           <div class="table-container">
+           <table>
+            <thead>
+                <tr>
+                    <th>Tanggal 2026</th>
+                    <th>Imsak</th>
+                    <th>Subuh</th>
+                    <th>Dzuhur</th>
+                    <th>Asar</th>
+                    <th>Magrib</th>
+                    <th>Isya</th>
+                </tr>
+            </thead>
+                <tbody id="isi-jadwal">
+                </tbody>
+           </table>
+           </div>
+           <img src="alquran.png" width="450px" height="450px" style="margin-top: -320px;">
+        </div>
+
+
+        <div class="niat bg-dark" id="Niat puasa">
+            <h1>Niat puasa</h1>
+            <br>
+            <p>نَوَيْتُ صَوْمَ غَدٍ عَنْ أَدَاءِ فَرْضِ شَهْرِ رَمَضَانَ هَذِهِ السَّنَةِ لِلّٰهِ تَعَالَى <br>
+           <br> Nawaitu shauma ghadin ‘an adā’i fardhi syahri Ramadhāna hâdzihis sanati lillāhi ta‘ālā. <br>
+       <br> Artinya
+“Aku niat berpuasa esok hari untuk menunaikan kewajiban puasa bulan Ramadhan tahun ini karena Allah Ta‘ala.”</p>
+        </div>
+
+        <div class="doa" id="Doa buka puasa">
+            <h1>Doa buka puasa</h1>
+            <br>
+            <p>اللَّهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ
+            <br> <br> Allahumma laka shumtu wa bika aamantu wa ‘alaika tawakkaltu wa ‘alaa rizqika afthartu. <br>
+            <br>Artinya
+“Ya Allah, karena-Mu aku berpuasa, kepada-Mu aku beriman, kepada-Mu aku bertawakal, dan dengan rezeki-Mu aku berbuka.”</p>
+        </div>
+
+        <div class="Quete" id="Quete islami">
+            <h1>Quete islami</h1>
+            <h2>🌙 “Ramadhan itu bukan cuma nahan lapar, tapi nahan ego.”<br>
+🌙 “Kalau scroll medsos bisa berjam-jam, masa Qur’an 10 menit aja berat?”<br>
+🌙 “Ramadhan bukan soal kuat-kuatan, tapi soal niat dan perubahan.”<br>
+🌙 “Yang bikin puasa berat itu bukan hausnya, tapi godaannya.”<br>
+🌙 “Ramadhan cuma 30 hari, tapi pahalanya bisa seumur hidup.”<br>
+🌙 “Upgrade diri terbaik? Mulai dari Ramadhan.”</h2>
+<h1> ceramah </h1>
+<p>Ramadhan bukan hanya tentang menahan lapar dan haus, tetapi tentang melatih diri menjadi pribadi yang lebih baik. Kita belajar sabar saat lapar, belajar bersyukur saat berbuka, dan belajar mengendalikan emosi serta lisan sepanjang hari.
+Puasa juga mengajarkan kita untuk lebih peduli. Saat merasakan lapar, kita jadi paham bagaimana rasanya orang yang kekurangan. Karena itu Ramadhan adalah waktu terbaik untuk berbagi dan memperbanyak kebaikan.
+Bulan ini adalah kesempatan untuk berubah. Jangan sampai setelah Ramadhan berlalu, kebiasaan buruk kita tetap sama. Jadikan Ramadhan sebagai titik awal untuk memperbaiki ibadah, menjaga sikap, dan meningkatkan ketakwaan.</p>
+        </div>
+
+        <div class="footer">
+            <h2>Marhaban Ya Ramadhan <br>
+                  Selamat Manunaikan Ibadah Puasa
+                </h2>
+            
+        </div>
+
+
+   <script>
+const tbody = document.getElementById("isi-jadwal");
+
+let tanggalMulai = new Date(2026, 1, 18);
+
+for (let i = 0; i < 30; i++) {
+
+  let tanggal = new Date(tanggalMulai);
+  tanggal.setDate(tanggalMulai.getDate() + i);
+
+  let hari = tanggal.getDate();
+  let bulan = tanggal.toLocaleString('id-ID', { month: 'short' });
+
+  
+  let imsakMenit = 5 + Math.floor(i / 5);   
+  let magribMenit = 20 + Math.floor(i / 6);
+
+  tbody.innerHTML += `
+    <tr>
+      <td>${hari} ${bulan}</td>
+      <td>05.${imsakMenit.toString().padStart(2, '0')}</td>
+      <td>05.${(imsakMenit + 10).toString().padStart(2, '0')}</td>
+      <td>12.15</td>
+      <td>15.30</td>
+      <td>18.${magribMenit.toString().padStart(2, '0')}</td>
+      <td>19.30</td>
+    </tr>
+  `;
+}
+</script>
+
+
+</body>
+</html>
