@@ -160,6 +160,11 @@ thead {
   margin: 0;
 }
 
+.niat p:hover {
+  transform: scale(1.1);
+}
+
+
 .niat {
    background: linear-gradient(to bottom,    #0f1f3d );
   background-size: cover;
@@ -212,6 +217,9 @@ thead {
   box-shadow: 20px 20px 20px black;
 }
 
+.doa p:hover {
+  transform: scale(1.1);
+}
 
 .Quete {
   background: linear-gradient(to bottom,    #0f1f3d );
@@ -272,3 +280,4 @@ thead {
  color: white;
  font-size: 20px;
 }
+
